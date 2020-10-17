@@ -1,79 +1,68 @@
-## 양식
+#### ✨ `Purpose`
+```
+[React, Redux, Saga] 프론트엔드 스타트킷
+```
+- 추가 중인 건...
+```angular2
+로그인 Auth HOC 추가
+```
+---
 
-👀 [[link]](https://Mmm668)
+#### ✨ `Author`
+- YHOMZ git [@Mmm668](https://github.com/Mmm668)
 
-**[Stack]**
-- React(Hook), React-router-dom, Styled-components
-- Redux, Saga, Axios
+---
 
-**[Todo]**
-- redux2 구조 추가 (slice 사용)
-- 공통 컴포넌트 종류 추가
-- 회원가입/로그인 샛 (saga 시나리오)
+#### ✨ `Stack`
+```
+react
+react-router-dom
+styled-components
+react-redux
+redux-saga
+axios
+history
+react-icons
+```
 
-**[Structure]**
+---
+
+#### ✨ `Structure`
+
+📁 *프로젝트*
+```
+--- api : axios모듈, api호출함수 선언
+--- assets : static image•scss파일 등
+--- components : 공통 컴포넌트
+--- helper : 각종 helper 함수
+--- mock : mock 데이터 모음
+--- pages : view page 모음
+--- redux : redux 구조 (하위 기술)
+--- App : Route || Routes.js
+--- index : App index
 
 ```
-    |____src
-    | |____api
-    | | |____index.js
-    | |____redux
-    | | |____app
-    | | | |____redux.js
-    | | | |____saga.js
-    | | |____store.js
-    | | |____actionCreators.js
-    | | |____sagas.js
-    | | |____reducers.js
-    | | |____photos
-    | | | |____redux.js
-    | | | |____saga.js
-    | |____helpers
-    | | |____HistoryHelper.js
-    | | |____TokenHelper.js
-    | | |____CommonHelper.js
-    
-    | |____mock
-    | | |____mock.js
-    | |____index.js
-    
-    | |____components
-    | | |____SearchBar
-    | | | |____index.js
-    | | | |____SearchBar.js
-    | | |____InfiniteScroll
-    | | | |____InfiniteScroll.js
-    | | |____Card
-    | | | |____index.js
-    | | | |____CardWrapper.js
-    | | | |____ModalDetail.js
-    | | | |____Card.js=
-    | | |____Modal
-    | | | |____ModalPortal.js
-    | | | |____index.js
-    | | | |____Modal.js
-    | | |____ . . . .
-    
-    | |____views
-    | | |____pages
-    | | | |____home
-    | | | | |____index.js
-    | | | | |____components
-    | | | | | |____MainCover.js
-    | | |____ . . . . 
-    
-    | |____assets
-    | | |____scss
-    | | | |____style.scss
-    | | | |____base
-    | | | | |_____reset.scss
-    | | | | |_____common.scss
-    | | | | |_____color.scss
-    | | |____image
-    | | | |____index.js
-    | | | |____user-icon.jpg
-    | | | |____. . . .
-    
-    | |____Routes.js
-    | |____App.js
-```  
+
+📁 *Redux*
+```
+|____redux
+| | |____app
+| | | |____redux.js : 해당 redux
+| | | |____saga.js : 해당 saga
+| | |
+| | |____actionCreators : combine action•creator, dispatch
+| | |____rootReducer : combine reducers
+| | |____sagas : saga per redux merge 
+| | |____store : 스토어 기본 세팅 (redux, saga)
+```
+
+---
+
+#### ✨ `Environment variables`
+```
+yarn start → .env.development 참고
+yarn build → .env.production 참고
+yarn test → .env.test 참고
+```
+- 사용은 process.env.REACT_APP_...
+- .env.---의 내용 수정 시 앱 재구동하여야 반영됨
