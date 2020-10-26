@@ -7,8 +7,6 @@ import Page404 from "./pages/Error/Page404";
 import {appCreators} from "./redux/actionCreators";
 import ToastMessage from "./components/ToastMessage/ToastMessage";
 import Home from "./pages/Home/Home";
-import Test2 from "./pages/Test2/Test2";
-import Test3 from "./pages/Test3/Test3";
 import Login from "./pages/Login/Login";
 
 const App = (props) => {
@@ -28,7 +26,6 @@ const App = (props) => {
             }
 
             {/*{isLoggedIn && <Menu />}*/}
-            {/* author test */}
             {/*
                 예)  option: null -> 누구나 출입이 가능한 페이지 (home)
                 true -> 로그인한 유저만 출입이 가능한 페이지
@@ -38,9 +35,7 @@ const App = (props) => {
             <Switch>
                 {/*<Route exact path='/' component={Auth(MainPage, null)} />*/}
                 <Route exact path={'/login'} component={Auth(Login, null)}/>
-                <Route exact path={'/home'} component={Auth(Home, null)}/>
-                <Route exact path={'/test2'} component={Auth(Test2, true)}/>
-                <Route exact path={'/test3'} component={Auth(Test3, false)}/>
+                <Route exact path={'/'} component={Auth(Home, null)}/>
 
                 <Route path={'/error/404'} component={Page404}/>
                 <Redirect to={'/error/404'}/>
