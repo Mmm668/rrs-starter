@@ -1,8 +1,11 @@
 export const Action = {
     Types: {
-        UPDATE_STATE: '@APP/UPDATE_STATE',
-        CLEAR_STORE: '@APP/CLEAR_STORE',
-        SET_TOAST_MESSAGE: '@APP/SET_TOAST_MESSAGE',
+        UPDATE_STATE: '@USER/UPDATE_STATE',
+        CLEAR_STORE: '@USER/CLEAR_STORE',
+
+        GET_USER_TOKEN: '@USER/GET_USER_TOKEN',
+        LOG_IN: '@USER/LOG_IN',
+        LOG_OUT: '@USER/LOG_OUT',
     },
     Creators: {
         updateState: (payload) => ({
@@ -12,16 +15,24 @@ export const Action = {
         clearStore: () => ({
             type: Action.Types.CLEAR_STORE,
         }),
-        setToastMessage: (message) => ({
-            type: Action.Types.SET_TOAST_MESSAGE,
-            message
+
+        getUserToken: () => ({
+            type: Action.Types.GET_USER_TOKEN,
         }),
+        logIn: (userInfo) => ({
+            type: Action.Types.LOG_IN,
+            userInfo
+        }),
+        logOut: () => ({
+            type: Action.Types.LOG_OUT
+        })
     }
 };
 
 
 const initialState = {
-    toastMessage: ''
+    isLoggedIn: false,
+    user: {}
 }
 
 export const reducer = (state = initialState, action) => {
