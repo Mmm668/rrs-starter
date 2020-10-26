@@ -28,6 +28,7 @@ const App = (props) => {
             }
 
             {/*{isLoggedIn && <Menu />}*/}
+            {/* author test */}
             {/*
                 예)  option: null -> 누구나 출입이 가능한 페이지 (home)
                 true -> 로그인한 유저만 출입이 가능한 페이지
